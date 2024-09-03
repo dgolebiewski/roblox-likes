@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Roblox See Liked Games",
-  "version": "1.0.5",
+  "version": "1.0.6",
 
   "description": "Colors your liked/disliked games on Roblox.",
 
@@ -15,7 +15,10 @@
   "content_scripts": [
     {
       "matches": ["*://www.roblox.com/*"],
-      "js": ["content_scripts/likes.js"]
+      "js": [
+        "content_scripts/browser-polyfill.js",
+        "content_scripts/likes.js"
+      ]
     }
   ],
 
